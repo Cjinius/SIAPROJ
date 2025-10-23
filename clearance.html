@@ -11,7 +11,6 @@
 <body>
     <div class="container">
         <nav class="sidebar">
-            <!-- Same sidebar -->
             <div class="logo"><i class="fas fa-graduation-cap"></i> Student Portal</div>
             <ul>
                 <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
@@ -31,15 +30,15 @@
         </nav>
         <main>
             <header>
-                <!-- Same header -->
+                <button id="hamburger" class="hamburger btn"><i class="fas fa-bars"></i></button>
                 <div class="search-bar">
                     <input type="search" placeholder="Search portal...">
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="header-actions">
-                    <button id="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+                    <button id="dark-mode-toggle" class="btn"><i class="fas fa-moon"></i> Dark Mode</button>
                     <div class="notifications">
-                        <button id="notifications-bell"><i class="fas fa-bell"></i> <span>3</span></button>
+                        <button id="notifications-bell" class="btn"><i class="fas fa-bell"></i> <span>3</span></button>
                         <div id="notifications-dropdown" class="hidden">
                             <p>Grade updated for OLIPT2.</p>
                             <p>New announcement posted.</p>
@@ -47,7 +46,7 @@
                         </div>
                     </div>
                     <div class="user-avatar">
-                        <img src="https://via.placeholder.com/40" alt="User">
+                        <img id="header-profile-pic" src="https://via.placeholder.com/40" alt="User">
                     </div>
                 </div>
             </header>
@@ -78,16 +77,29 @@
                             <td>Laboratory</td>
                             <td>Equipment Return</td>
                             <td>Pending</td>
-                            <td><button class="resolve-btn">Resolve</button></td>
+                            <td><button class="resolve-btn btn"><i class="fas fa-check"></i> Resolve</button></td>
                         </tr>
                         <tr>
                             <td>Library</td>
                             <td>Book Return</td>
                             <td>Pending</td>
-                            <td><button class="resolve-btn">Resolve</button></td>
+                            <td><button class="resolve-btn btn"><i class="fas fa-check"></i> Resolve</button></td>
                         </tr>
                     </tbody>
                 </table>
+                <ul class="clearance-checklist">
+                    <li><input type="checkbox" checked> Transcript</li>
+                    <li><input type="checkbox"> Equipment Return</li>
+                    <li><input type="checkbox"> Book Return</li>
+                </ul>
+                <a href="#" id="download-clearance" class="btn"><i class="fas fa-download"></i> Download Clearance Form</a>
+                <details>
+                    <summary>Status History</summary>
+                    <ul>
+                        <li>Transcript completed on Oct 1, 2025</li>
+                        <li>Equipment pending since Sep 15, 2025</li>
+                    </ul>
+                </details>
             </section>
         </main>
     </div>

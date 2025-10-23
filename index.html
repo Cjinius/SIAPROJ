@@ -12,13 +12,27 @@
     <div class="login-container">
         <h1>Welcome to Student Portal</h1>
         <form id="login-form">
-            <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Enter username" required>
+            <label for="student-number">Student Number</label>
+            <input type="text" id="student-number" placeholder="Enter student number" required>
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter password" required>
-            <button type="submit">Login</button>
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Enter password" required>
+                <button type="button" id="toggle-password" class="btn" aria-label="Toggle password visibility"><i class="fas fa-eye"></i></button>
+            </div>
+            <button type="submit" class="btn"><i class="fas fa-sign-in-alt"></i> Login</button>
+            <a href="#" id="forgot-password">Forgot Password?</a>
+            <label><input type="checkbox" id="remember-me"> Remember Me</label>
         </form>
     </div>
+    <dialog id="forgot-modal">
+        <h2>Forgot Password</h2>
+        <p>Enter your email to reset.</p>
+        <form id="reset-form">
+            <input type="email" placeholder="Email" required>
+            <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Reset Link</button>
+            <button type="button" id="close-modal" class="btn"><i class="fas fa-times"></i> Close</button>
+        </form>
+    </dialog>
     <script src="script.js"></script>
 </body>
 </html>

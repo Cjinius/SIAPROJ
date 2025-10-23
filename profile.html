@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
 </head>
 <body>
     <div class="container">
         <nav class="sidebar">
-            <!-- Same sidebar -->
             <div class="logo"><i class="fas fa-graduation-cap"></i> Student Portal</div>
             <ul>
                 <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
@@ -31,15 +32,15 @@
         </nav>
         <main>
             <header>
-                <!-- Same header -->
+                <button id="hamburger" class="hamburger btn"><i class="fas fa-bars"></i></button>
                 <div class="search-bar">
                     <input type="search" placeholder="Search portal...">
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="header-actions">
-                    <button id="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+                    <button id="dark-mode-toggle" class="btn"><i class="fas fa-moon"></i> Dark Mode</button>
                     <div class="notifications">
-                        <button id="notifications-bell"><i class="fas fa-bell"></i> <span>3</span></button>
+                        <button id="notifications-bell" class="btn"><i class="fas fa-bell"></i> <span>3</span></button>
                         <div id="notifications-dropdown" class="hidden">
                             <p>Grade updated for OLIPT2.</p>
                             <p>New announcement posted.</p>
@@ -47,7 +48,7 @@
                         </div>
                     </div>
                     <div class="user-avatar">
-                        <img src="https://via.placeholder.com/40" alt="User">
+                        <img id="header-profile-pic" src="https://via.placeholder.com/40" alt="User">
                     </div>
                 </div>
             </header>
@@ -55,19 +56,27 @@
             <section id="profile" class="section">
                 <h2><i class="fas fa-user-edit"></i> Profile</h2>
                 <div class="profile-card">
-                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+                    <img id="profile-pic" src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+                    <input type="file" id="profile-pic-upload" accept="image/*">
+                    <div id="cropper-container" class="hidden">
+                        <img id="cropper-image">
+                        <button id="crop-btn" class="btn"><i class="fas fa-crop"></i> Crop & Save</button>
+                    </div>
+                    <button id="edit-mode-toggle" class="btn"><i class="fas fa-edit"></i> Edit Mode</button>
                     <form id="profile-form">
                         <label>Student Number:</label><input type="text" value="UA202200984" readonly>
                         <label>Program:</label><input type="text" value="Fourth Year BS Information Technology" readonly>
                         <label>Curriculum:</label><input type="text" value="2021" readonly>
-                        <label>Section:</label><input type="text" value="LFAU411A075" readonly>
+                        <label>Section:</label><input id="user-section" type="text" value="LFAU311N010" readonly>
                         <label>Status:</label><input type="text" value="Continuing (Regular)" readonly>
                         <label>School Year:</label><input type="text" value="2025-2026" readonly>
                         <label>Term:</label><input type="text" value="First Term" readonly>
-                        <label>Email:</label><input type="email" value="student@example.com">
-                        <label>Phone:</label><input type="tel" value="+63 912 345 6789">
-                        <button type="submit">Save Changes</button>
+                        <label>Email:</label><input type="email" value="student@example.com" disabled>
+                        <label>Phone:</label><input type="tel" value="+63 912 345 6789" disabled>
+                        <button type="submit" class="btn" disabled><i class="fas fa-save"></i> Save Changes</button>
                     </form>
+                    <button id="change-password" class="btn"><i class="fas fa-lock"></i> Change Password</button>
+                    <button id="backup-profile" class="btn"><i class="fas fa-download"></i> Backup Profile</button>
                 </div>
             </section>
         </main>

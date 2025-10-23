@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
@@ -31,14 +30,15 @@
         </nav>
         <main>
             <header>
+                <button id="hamburger" class="hamburger btn"><i class="fas fa-bars"></i></button>
                 <div class="search-bar">
                     <input type="search" placeholder="Search portal...">
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="header-actions">
-                    <button id="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+                    <button id="dark-mode-toggle" class="btn"><i class="fas fa-moon"></i> Dark Mode</button>
                     <div class="notifications">
-                        <button id="notifications-bell"><i class="fas fa-bell"></i> <span>3</span></button>
+                        <button id="notifications-bell" class="btn"><i class="fas fa-bell"></i> <span>3</span></button>
                         <div id="notifications-dropdown" class="hidden">
                             <p>Grade updated for OLIPT2.</p>
                             <p>New announcement posted.</p>
@@ -46,14 +46,14 @@
                         </div>
                     </div>
                     <div class="user-avatar">
-                        <img src="https://via.placeholder.com/40" alt="User">
+                        <img id="header-profile-pic" src="https://via.placeholder.com/40" alt="User">
                     </div>
                 </div>
             </header>
 
             <section id="dashboard" class="section">
                 <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
-                <p class="welcome-message">Welcome back, Student Name!</p>
+                <p class="welcome-message">Welcome back, <span id="user-name">Elleran, CJ</span> (Section: <span id="user-section">LFAU311N010</span>, GPA: <span id="user-gpa">2.00</span>)!</p>
                 <div class="dashboard-grid">
                     <div class="card">
                         <i class="fas fa-book-open icon"></i>
@@ -63,7 +63,7 @@
                     <div class="card">
                         <i class="fas fa-star icon"></i>
                         <h3>Current GPA</h3>
-                        <p class="value">3.25</p>
+                        <p class="value" id="user-gpa">2.00</p>
                     </div>
                     <div class="card">
                         <i class="fas fa-tasks icon"></i>
@@ -77,10 +77,22 @@
                     </div>
                 </div>
                 <canvas id="gpa-chart" width="400" height="200"></canvas>
+                <div class="task-widget">
+                    <h3>Upcoming Deadlines</h3>
+                    <p>Final Exam in <span id="countdown">5 days</span></p>
+                </div>
+                <div class="weather-widget">
+                    <h3>Campus Weather</h3>
+                    <p>Sunny, 28°C</p>
+                </div>
                 <div class="quick-links">
-                    <a href="subjects.html" class="quick-link"><i class="fas fa-book"></i> View Subjects</a>
-                    <a href="schedule.html" class="quick-link"><i class="fas fa-calendar"></i> Check Schedule</a>
-                    <a href="grades.html" class="quick-link"><i class="fas fa-chart-bar"></i> See Grades</a>
+                    <a href="subjects.html" class="quick-link btn"><i class="fas fa-book"></i> View Subjects</a>
+                    <a href="schedule.html" class="quick-link btn"><i class="fas fa-calendar"></i> Check Schedule</a>
+                    <a href="grades.html" class="quick-link btn"><i class="fas fa-chart-bar"></i> See Grades</a>
+                </div>
+                <div class="gpa-update">
+                    <input type="number" id="gpa-input" min="1" max="5" step="0.25" placeholder="Update GPA">
+                    <button id="update-gpa" class="btn"><i class="fas fa-edit"></i> Update</button>
                 </div>
             </section>
         </main>
@@ -89,6 +101,6 @@
         <p>&copy; 2025 Student Portal. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
-    <script src="chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

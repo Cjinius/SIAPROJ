@@ -11,7 +11,6 @@
 <body>
     <div class="container">
         <nav class="sidebar">
-            <!-- Same sidebar -->
             <div class="logo"><i class="fas fa-graduation-cap"></i> Student Portal</div>
             <ul>
                 <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
@@ -31,15 +30,15 @@
         </nav>
         <main>
             <header>
-                <!-- Same header -->
+                <button id="hamburger" class="hamburger btn"><i class="fas fa-bars"></i></button>
                 <div class="search-bar">
                     <input type="search" placeholder="Search portal...">
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="header-actions">
-                    <button id="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+                    <button id="dark-mode-toggle" class="btn"><i class="fas fa-moon"></i> Dark Mode</button>
                     <div class="notifications">
-                        <button id="notifications-bell"><i class="fas fa-bell"></i> <span>3</span></button>
+                        <button id="notifications-bell" class="btn"><i class="fas fa-bell"></i> <span>3</span></button>
                         <div id="notifications-dropdown" class="hidden">
                             <p>Grade updated for OLIPT2.</p>
                             <p>New announcement posted.</p>
@@ -47,20 +46,43 @@
                         </div>
                     </div>
                     <div class="user-avatar">
-                        <img src="https://via.placeholder.com/40" alt="User">
+                        <img id="header-profile-pic" src="https://via.placeholder.com/40" alt="User">
                     </div>
                 </div>
             </header>
 
             <section id="settings" class="section">
-                <h2><i class="fas fa-sliders-h"></i> Account Settings</h2>
+                <h2><i class="fas fa-cogs"></i> Settings</h2>
                 <div class="settings-grid">
-                    <label><input type="checkbox" id="email-notifications"> Email Notifications</label>
-                    <label><input type="checkbox" id="sms-notifications"> SMS Notifications</label>
-                    <label><input type="checkbox" id="two-factor"> Two-Factor Authentication</label>
-                    <label><input type="checkbox" id="auto-dark-mode"> Auto Dark Mode</label>
-                    <button id="save-settings"><i class="fas fa-save"></i> Save Changes</button>
+                    <div class="setting-card">
+                        <h3>Theme</h3>
+                        <select id="theme-select">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                            <option value="high-contrast">High Contrast</option>
+                        </select>
+                        <input type="color" id="custom-color" value="#4a90e2">
+                        <div id="theme-preview" class="theme-preview"></div>
+                    </div>
+                    <div class="setting-card">
+                        <h3>Notifications</h3>
+                        <label><input type="checkbox" id="email-notif"> Email</label>
+                        <label><input type="checkbox" id="sms-notif"> SMS</label>
+                        <label><input type="checkbox" id="sound-notif"> Sound</label>
+                    </div>
+                    <div class="setting-card">
+                        <h3>Language</h3>
+                        <select id="language-select">
+                            <option value="en">English</option>
+                            <option value="tl">Filipino</option>
+                        </select>
+                    </div>
+                    <div class="setting-card">
+                        <h3>Security</h3>
+                        <label><input type="checkbox" id="2fa-toggle"> Enable Two-Factor Authentication</label>
+                    </div>
                 </div>
+                <button id="backup-settings" class="btn"><i class="fas fa-download"></i> Backup Profile Data</button>
             </section>
         </main>
     </div>

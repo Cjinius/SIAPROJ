@@ -11,7 +11,6 @@
 <body>
     <div class="container">
         <nav class="sidebar">
-            <!-- Same sidebar -->
             <div class="logo"><i class="fas fa-graduation-cap"></i> Student Portal</div>
             <ul>
                 <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
@@ -31,15 +30,15 @@
         </nav>
         <main>
             <header>
-                <!-- Same header -->
+                <button id="hamburger" class="hamburger btn"><i class="fas fa-bars"></i></button>
                 <div class="search-bar">
-                    <input type="search" placeholder="Search portal...">
+                    <input type="search" id="document-search" placeholder="Search documents...">
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="header-actions">
-                    <button id="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+                    <button id="dark-mode-toggle" class="btn"><i class="fas fa-moon"></i> Dark Mode</button>
                     <div class="notifications">
-                        <button id="notifications-bell"><i class="fas fa-bell"></i> <span>3</span></button>
+                        <button id="notifications-bell" class="btn"><i class="fas fa-bell"></i> <span>3</span></button>
                         <div id="notifications-dropdown" class="hidden">
                             <p>Grade updated for OLIPT2.</p>
                             <p>New announcement posted.</p>
@@ -47,7 +46,7 @@
                         </div>
                     </div>
                     <div class="user-avatar">
-                        <img src="https://via.placeholder.com/40" alt="User">
+                        <img id="header-profile-pic" src="https://via.placeholder.com/40" alt="User">
                     </div>
                 </div>
             </header>
@@ -58,27 +57,39 @@
                     <div class="progress" style="width: 0%;"></div>
                     <span>0 of 3 uploaded</span>
                 </div>
+                <div class="drop-zone" id="drop-zone">Drag & Drop Files Here</div>
+                <select id="document-filter">
+                    <option value="">Filter by Type</option>
+                    <option value="academic">Academic</option>
+                    <option value="personal">Personal</option>
+                </select>
                 <ul class="documents-list">
                     <li>
                         <i class="fas fa-file-pdf"></i>
                         <span>Birth Certificate (PSA-issued)</span>
                         <span class="status">Not Uploaded</span>
                         <input type="file" accept=".pdf" data-item="0">
-                        <button class="upload-btn"><i class="fas fa-upload"></i> Upload</button>
+                        <button class="upload-btn btn"><i class="fas fa-upload"></i> Upload</button>
+                        <a href="#" class="download-btn btn hidden" data-item="0"><i class="fas fa-download"></i> Download</a>
+                        <div class="file-preview hidden"></div>
                     </li>
                     <li>
                         <i class="fas fa-file-pdf"></i>
                         <span>Form 137 (High school record)</span>
                         <span class="status">Not Uploaded</span>
                         <input type="file" accept=".pdf" data-item="1">
-                        <button class="upload-btn"><i class="fas fa-upload"></i> Upload</button>
+                        <button class="upload-btn btn"><i class="fas fa-upload"></i> Upload</button>
+                        <a href="#" class="download-btn btn hidden" data-item="1"><i class="fas fa-download"></i> Download</a>
+                        <div class="file-preview hidden"></div>
                     </li>
                     <li>
                         <i class="fas fa-file-pdf"></i>
                         <span>Grades (Latest transcript)</span>
                         <span class="status">Not Uploaded</span>
                         <input type="file" accept=".pdf" data-item="2">
-                        <button class="upload-btn"><i class="fas fa-upload"></i> Upload</button>
+                        <button class="upload-btn btn"><i class="fas fa-upload"></i> Upload</button>
+                        <a href="#" class="download-btn btn hidden" data-item="2"><i class="fas fa-download"></i> Download</a>
+                        <div class="file-preview hidden"></div>
                     </li>
                 </ul>
             </section>

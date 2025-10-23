@@ -11,7 +11,6 @@
 <body>
     <div class="container">
         <nav class="sidebar">
-            <!-- Same sidebar as dashboard.html -->
             <div class="logo"><i class="fas fa-graduation-cap"></i> Student Portal</div>
             <ul>
                 <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
@@ -31,15 +30,15 @@
         </nav>
         <main>
             <header>
-                <!-- Same header as dashboard.html -->
+                <button id="hamburger" class="hamburger btn"><i class="fas fa-bars"></i></button>
                 <div class="search-bar">
-                    <input type="search" placeholder="Search portal...">
+                    <input type="search" id="announcement-search" placeholder="Search announcements...">
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="header-actions">
-                    <button id="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+                    <button id="dark-mode-toggle" class="btn"><i class="fas fa-moon"></i> Dark Mode</button>
                     <div class="notifications">
-                        <button id="notifications-bell"><i class="fas fa-bell"></i> <span>3</span></button>
+                        <button id="notifications-bell" class="btn"><i class="fas fa-bell"></i> <span>3</span></button>
                         <div id="notifications-dropdown" class="hidden">
                             <p>Grade updated for OLIPT2.</p>
                             <p>New announcement posted.</p>
@@ -47,26 +46,38 @@
                         </div>
                     </div>
                     <div class="user-avatar">
-                        <img src="https://via.placeholder.com/40" alt="User">
+                        <img id="header-profile-pic" src="https://via.placeholder.com/40" alt="User">
                     </div>
                 </div>
             </header>
 
             <section id="announcements" class="section">
                 <h2><i class="fas fa-bullhorn"></i> Announcements</h2>
-                <div class="announcement-feed">
-                    <div class="announcement-card">
-                        <h3>Oct 15, 2025 - Final Exam Schedule Released</h3>
-                        <p>Check your schedule for updates.</p>
+                <select id="announcement-filter">
+                    <option value="">Filter by Category</option>
+                    <option value="academic">Academic</option>
+                    <option value="events">Events</option>
+                </select>
+                <div class="announcement-carousel">
+                    <button class="carousel-prev btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-container">
+                        <div class="announcement-card">
+                            <h3>Oct 15, 2025 - Final Exam Schedule Released</h3>
+                            <p>Check your schedule for updates.</p>
+                            <button class="mark-read btn"><i class="fas fa-check"></i> Mark as Read</button>
+                        </div>
+                        <div class="announcement-card">
+                            <h3>Oct 10, 2025 - Graduation Application Deadline</h3>
+                            <p>Apply now if eligible.</p>
+                            <button class="mark-read btn"><i class="fas fa-check"></i> Mark as Read</button>
+                        </div>
+                        <div class="announcement-card">
+                            <h3>Oct 20, 2025 - Campus Event: Tech Workshop</h3>
+                            <p>Join us for hands-on sessions.</p>
+                            <button class="mark-read btn"><i class="fas fa-check"></i> Mark as Read</button>
+                        </div>
                     </div>
-                    <div class="announcement-card">
-                        <h3>Oct 10, 2025 - Graduation Application Deadline</h3>
-                        <p>Apply now if eligible.</p>
-                    </div>
-                    <div class="announcement-card">
-                        <h3>Oct 20, 2025 - Campus Event: Tech Workshop</h3>
-                        <p>Join us for hands-on sessions.</p>
-                    </div>
+                    <button class="carousel-next btn"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </section>
         </main>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents - Modern Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <!-- Same sidebar -->
+            <div class="logo"><i class="fas fa-graduation-cap"></i> Student Portal</div>
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="announcements.html"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+                <li><a href="subjects.html"><i class="fas fa-book"></i> Subjects</a></li>
+                <li><a href="schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
+                <li><a href="grades.html"><i class="fas fa-chart-line"></i> Grades</a></li>
+                <li><a href="payments.html"><i class="fas fa-wallet"></i> Payments</a></li>
+                <li><a href="clearance.html"><i class="fas fa-check-circle"></i> Clearance</a></li>
+                <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+                <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <header>
+                <!-- Same header -->
+                <div class="search-bar">
+                    <input type="search" placeholder="Search portal...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="header-actions">
+                    <button id="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+                    <div class="notifications">
+                        <button id="notifications-bell"><i class="fas fa-bell"></i> <span>3</span></button>
+                        <div id="notifications-dropdown" class="hidden">
+                            <p>Grade updated for OLIPT2.</p>
+                            <p>New announcement posted.</p>
+                            <p>Payment due soon.</p>
+                        </div>
+                    </div>
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/40" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <section id="documents" class="section">
+                <h2><i class="fas fa-folder-open"></i> Documents</h2>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                    <span>0 of 3 uploaded</span>
+                </div>
+                <ul class="documents-list">
+                    <li>
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Birth Certificate (PSA-issued)</span>
+                        <span class="status">Not Uploaded</span>
+                        <input type="file" accept=".pdf" data-item="0">
+                        <button class="upload-btn"><i class="fas fa-upload"></i> Upload</button>
+                    </li>
+                    <li>
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Form 137 (High school record)</span>
+                        <span class="status">Not Uploaded</span>
+                        <input type="file" accept=".pdf" data-item="1">
+                        <button class="upload-btn"><i class="fas fa-upload"></i> Upload</button>
+                    </li>
+                    <li>
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Grades (Latest transcript)</span>
+                        <span class="status">Not Uploaded</span>
+                        <input type="file" accept=".pdf" data-item="2">
+                        <button class="upload-btn"><i class="fas fa-upload"></i> Upload</button>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 Student Portal. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

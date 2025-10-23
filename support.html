@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Modern Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <!-- Same sidebar -->
+            <div class="logo"><i class="fas fa-graduation-cap"></i> Student Portal</div>
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="announcements.html"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+                <li><a href="subjects.html"><i class="fas fa-book"></i> Subjects</a></li>
+                <li><a href="schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
+                <li><a href="grades.html"><i class="fas fa-chart-line"></i> Grades</a></li>
+                <li><a href="payments.html"><i class="fas fa-wallet"></i> Payments</a></li>
+                <li><a href="clearance.html"><i class="fas fa-check-circle"></i> Clearance</a></li>
+                <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+                <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <header>
+                <!-- Same header -->
+                <div class="search-bar">
+                    <input type="search" placeholder="Search portal...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="header-actions">
+                    <button id="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+                    <div class="notifications">
+                        <button id="notifications-bell"><i class="fas fa-bell"></i> <span>3</span></button>
+                        <div id="notifications-dropdown" class="hidden">
+                            <p>Grade updated for OLIPT2.</p>
+                            <p>New announcement posted.</p>
+                            <p>Payment due soon.</p>
+                        </div>
+                    </div>
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/40" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <section id="support" class="section">
+                <h2><i class="fas fa-life-ring"></i> Help & Support</h2>
+                <div class="support-grid">
+                    <div class="support-card">
+                        <i class="fas fa-question-circle icon"></i>
+                        <h3>FAQ</h3>
+                        <details>
+                            <summary>How do I upload documents?</summary>
+                            <p>Use the upload button in the Documents section.</p>
+                        </details>
+                        <details>
+                            <summary>How to check grades?</summary>
+                            <p>Go to the Grades section.</p>
+                        </details>
+                    </div>
+                    <div class="support-card">
+                        <i class="fas fa-phone-alt icon"></i>
+                        <h3>Contact Us</h3>
+                        <p>Phone: +63 2 1234 5678</p>
+                        <p>Email: support@portal.edu</p>
+                        <button class="chat-btn"><i class="fas fa-comment"></i> Live Chat</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 Student Portal. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

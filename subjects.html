@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects - Modern Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <!-- Same sidebar -->
+            <div class="logo"><i class="fas fa-graduation-cap"></i> Student Portal</div>
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="announcements.html"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+                <li><a href="subjects.html"><i class="fas fa-book"></i> Subjects</a></li>
+                <li><a href="schedule.html"><i class="fas fa-calendar-alt"></i> Schedule</a></li>
+                <li><a href="grades.html"><i class="fas fa-chart-line"></i> Grades</a></li>
+                <li><a href="payments.html"><i class="fas fa-wallet"></i> Payments</a></li>
+                <li><a href="clearance.html"><i class="fas fa-check-circle"></i> Clearance</a></li>
+                <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+                <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <header>
+                <!-- Same header -->
+                <div class="search-bar">
+                    <input type="search" placeholder="Search portal...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="header-actions">
+                    <button id="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+                    <div class="notifications">
+                        <button id="notifications-bell"><i class="fas fa-bell"></i> <span>3</span></button>
+                        <div id="notifications-dropdown" class="hidden">
+                            <p>Grade updated for OLIPT2.</p>
+                            <p>New announcement posted.</p>
+                            <p>Payment due soon.</p>
+                        </div>
+                    </div>
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/40" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <section id="subjects" class="section">
+                <h2><i class="fas fa-books"></i> Current Subjects</h2>
+                <input type="search" id="subjects-search" placeholder="Search subjects...">
+                <table class="modern-table">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Title</th>
+                            <th>Lec</th>
+                            <th>Lab</th>
+                            <th>Units</th>
+                            <th>Professor</th>
+                            <th>Schedule</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>OLSA01</td>
+                            <td>Systems Analysis and Design</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td>Prof. Example</td>
+                            <td>W/S 1:30PM-3:00PM</td>
+                        </tr>
+                        <tr>
+                            <td>OLIPT2</td>
+                            <td>Information Technology Project 2</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>Chions, Jord Dedal</td>
+                            <td>W/S 4:30PM-6:00PM</td>
+                        </tr>
+                        <tr>
+                            <td>OLWEB3</td>
+                            <td>Web Development Advanced</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>Prof. Web</td>
+                            <td>M/T 10:00AM-11:30AM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 Student Portal. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

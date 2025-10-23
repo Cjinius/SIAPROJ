@@ -11,7 +11,6 @@
 <body>
     <div class="container">
         <nav class="sidebar">
-            <!-- Same sidebar -->
             <div class="logo"><i class="fas fa-graduation-cap"></i> Student Portal</div>
             <ul>
                 <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
@@ -31,15 +30,15 @@
         </nav>
         <main>
             <header>
-                <!-- Same header -->
+                <button id="hamburger" class="hamburger btn"><i class="fas fa-bars"></i></button>
                 <div class="search-bar">
-                    <input type="search" placeholder="Search portal...">
+                    <input type="search" id="payment-search" placeholder="Search payments...">
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="header-actions">
-                    <button id="dark-mode-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+                    <button id="dark-mode-toggle" class="btn"><i class="fas fa-moon"></i> Dark Mode</button>
                     <div class="notifications">
-                        <button id="notifications-bell"><i class="fas fa-bell"></i> <span>3</span></button>
+                        <button id="notifications-bell" class="btn"><i class="fas fa-bell"></i> <span>3</span></button>
                         <div id="notifications-dropdown" class="hidden">
                             <p>Grade updated for OLIPT2.</p>
                             <p>New announcement posted.</p>
@@ -47,13 +46,18 @@
                         </div>
                     </div>
                     <div class="user-avatar">
-                        <img src="https://via.placeholder.com/40" alt="User">
+                        <img id="header-profile-pic" src="https://via.placeholder.com/40" alt="User">
                     </div>
                 </div>
             </header>
 
             <section id="payments" class="section">
                 <h2><i class="fas fa-credit-card"></i> Account & Payments</h2>
+                <div class="payment-due-banner">
+                    <p>Payment due in <span id="payment-countdown">3 days</span></p>
+                </div>
+                <h3>Balance Overview</h3>
+                <p>Total Due: <span id="total-due">₱0.00</span></p>
                 <h3>Payment Methods</h3>
                 <ul class="payment-methods">
                     <li><i class="fab fa-paypal"></i> PayPal</li>
@@ -68,6 +72,7 @@
                             <th>Description</th>
                             <th>Amount</th>
                             <th>Status</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -76,16 +81,32 @@
                             <td>Tuition Fee</td>
                             <td>₱126.70</td>
                             <td>Paid</td>
+                            <td><a href="#" class="download-btn btn"><i class="fas fa-download"></i> Receipt</a></td>
                         </tr>
                         <tr>
                             <td>Sep 5, 2025</td>
                             <td>Lab Fee</td>
                             <td>₱50.00</td>
                             <td>Paid</td>
+                            <td><a href="#" class="download-btn btn"><i class="fas fa-download"></i> Receipt</a></td>
                         </tr>
                     </tbody>
                 </table>
-                <button class="pay-now-btn"><i class="fas fa-money-bill"></i> Pay Now</button>
+                <button class="pay-now-btn btn"><i class="fas fa-money-bill"></i> Pay Now</button>
+                <dialog id="payment-modal">
+                    <h2>Make Payment</h2>
+                    <form id="payment-form">
+                        <input type="number" placeholder="Amount" required>
+                        <select required>
+                            <option value="">Select Method</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="bank">Bank Transfer</option>
+                            <option value="card">Credit Card</option>
+                        </select>
+                        <button type="submit" class="btn"><i class="fas fa-credit-card"></i> Pay</button>
+                        <button type="button" id="close-payment-modal" class="btn"><i class="fas fa-times"></i> Close</button>
+                    </form>
+                </dialog>
             </section>
         </main>
     </div>
